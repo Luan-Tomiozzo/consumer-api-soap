@@ -3,6 +3,7 @@ package br.com.consumer.controller;
 import br.com.consumer.exception.RestResponseException;
 import br.com.consumer.repository.ConsumerRepository;
 import br.com.consumer.util.ConsumerUtils;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @RestController
 @RequestMapping("/v1")
+@Tag(name = "Consumer")
 public class ConsumerController {
 
     @GetMapping(path = "/consulta-cep", produces = {"application/json"})
