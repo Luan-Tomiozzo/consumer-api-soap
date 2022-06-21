@@ -20,10 +20,6 @@ public class ConsumerRepository {
         return new AtendeClienteService().getAtendeClientePort().consultaCEP(cep);
     }
 
-    public List<String> getServicosValorDeclarado(String usuario, String senha) throws Exception {
-        return new AtendeClienteService().getAtendeClientePort().buscaServicosValorDeclarado(usuario, senha);
-    }
-
     public XMLGregorianCalendar getDataAtual() {
         return new AtendeClienteService().getAtendeClientePort().buscaDataAtual();
     }
@@ -32,11 +28,4 @@ public class ConsumerRepository {
         return new AtendeClienteService().getAtendeClientePort().buscaServicosAdicionaisAtivos(usuario, senha);
     }
 
-    public String getCalculoValorServico(String codAdministrativo, String usuario, String senha, String codServico, String cepOrigem, String cepDestino, String peso, Integer codFormato, Double comprimento, Double altura, Double largura, Double diametro, String codMaoPropria, Double valorDeclarado, String codAvisoRecebimento) throws Exception {
-        return new AtendeClienteService().getAtendeClientePort().calculaTarifaServico(codAdministrativo, usuario, senha, codServico, cepOrigem, cepDestino, peso, codFormato, comprimento, altura, largura, diametro, codMaoPropria, valorDeclarado, codAvisoRecebimento);
-    }
-
-    public List<ServicoERP> getServicos(String idContrato, String idCartaoPostagem, String usuario, String senha) throws AutenticacaoException, SigepClienteException {
-        return new AtendeClienteService().getAtendeClientePort().buscaServicos(idContrato, idCartaoPostagem, usuario, senha);
-    }
 }
